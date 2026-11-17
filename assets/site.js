@@ -29,4 +29,23 @@
 
   // Keep the looping ticker accessible: its duplicated visual run is hidden from screen readers.
   document.querySelectorAll("[data-ticker-copy]").forEach((copy) => copy.setAttribute("aria-hidden", "true"));
+
+  // Let visitors copy the verified quick-start commands without leaving the page.
+  document.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const value = button.getAttribute("data-copy");
+      try {
+        await navigator.clipboard.writeText(value);
+        button.textContent = "Copied";
+        button.classList.add("is-copied");
+        window.setTimeout(() => {
+          button.textContent = "Copy";
+          button.classList.remove("is-copied");
+        }, 1600);
+      } catch {
+        button.textContent = "Select manually";
+        window.setTimeout(() => { button.textContent = "Copy"; }, 1800);
+      }
+    });
+  });
 })();

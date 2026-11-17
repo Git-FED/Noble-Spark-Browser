@@ -36,8 +36,8 @@
             <h1 class="display-title">Curious by nature.<span class="muted-word">Careful by design.</span></h1>
             <p class="lede">A small, authorization-first toolkit for testing websites you own or have explicit permission to assess. The only thing we’re trying to catch is a bug—not a workaround.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="responsible-use.html">Read responsible-use guide <span class="arrow">→</span></a>
-              <a class="btn btn-quiet" href="community-invite.html">Visit the community <span class="arrow">↗</span></a>
+              <a class="btn btn-primary" href="https://github.com/Git-FED/Noble-Spark-Browser-Python" target="_blank" rel="noopener">Open the repository <span class="arrow">↗</span></a>
+              <a class="btn btn-quiet" href="responsible-use.html">Read responsible use <span class="arrow">→</span></a>
             </div>
             <div class="tape-line"></div>
             <div class="feature-strip">
@@ -50,6 +50,27 @@
             <img src="assets/art/hero-comic-banner.webp" alt="Comic illustration of a website tester examining a harmless browser glitch at a desk">
             <figcaption class="hero-art-tag">The bug is smaller than the report</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="quickstart-section container" aria-labelledby="quickstart-title">
+        <div class="quickstart reveal">
+          <div class="quickstart-copy">
+            <div class="kicker">Verified path · about 60 seconds</div>
+            <h2 id="quickstart-title">Go from clone to first page.</h2>
+            <p>Install the small Python toolkit, open a permitted URL, and inspect the result from the command line. No build pipeline, account, or hosted service required.</p>
+            <div class="verification-row" aria-label="Verification results">
+              <span class="status-chip">6 endpoints online</span>
+              <span class="status-chip">Screenshot included</span>
+              <span class="status-chip">Example.com verified</span>
+            </div>
+          </div>
+          <div class="command-panel" aria-label="Quick-start commands">
+            <div class="command-line"><code><span class="prompt">$</span> pip install -r requirements.txt</code><button class="copy-command" type="button" data-copy="pip install -r requirements.txt" aria-label="Copy install command">Copy</button></div>
+            <div class="command-line"><code><span class="prompt">$</span> python -m playwright install chromium</code><button class="copy-command" type="button" data-copy="python -m playwright install chromium" aria-label="Copy browser install command">Copy</button></div>
+            <div class="command-line"><code><span class="prompt">$</span> python cli.py open https://example.com --text</code><button class="copy-command" type="button" data-copy="python cli.py open https://example.com --text" aria-label="Copy first run command">Copy</button></div>
+            <a class="command-link" href="https://github.com/Git-FED/Noble-Spark-Browser-Python#readme" target="_blank" rel="noopener">Read the full setup notes <span>↗</span></a>
+          </div>
         </div>
       </section>
 

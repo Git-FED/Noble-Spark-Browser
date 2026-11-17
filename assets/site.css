@@ -172,6 +172,21 @@ h1, h2, h3 { text-wrap: balance; }
 .feature + .feature { padding-left: 22px; border-left: 1px solid var(--line); }
 .feature strong { display: block; margin-bottom: 5px; color: #dbe6e4; font-size: 12px; }
 .feature span { color: #819094; font-size: 11px; }
+.quickstart-section { padding: 10px 0 66px; }
+.quickstart { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .88fr); gap: clamp(28px, 6vw, 82px); align-items: center; padding: clamp(28px, 5vw, 54px); border: 1px solid rgba(123, 206, 205, .27); background: linear-gradient(118deg, rgba(13, 30, 34, .92), rgba(13, 18, 25, .93)); box-shadow: 7px 7px 0 rgba(45, 88, 91, .1); }
+.quickstart h2 { max-width: 540px; margin: 13px 0 12px; font-size: clamp(31px, 4.6vw, 55px); line-height: .98; letter-spacing: -.06em; font-weight: 520; }
+.quickstart-copy > p { max-width: 520px; margin: 0; color: #aab8b9; font-size: 13px; line-height: 1.75; }
+.verification-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
+.verification-row .status-chip { font-size: 8px; }
+.command-panel { padding: 12px; border: 1px solid rgba(172, 205, 208, .16); background: rgba(5, 10, 14, .82); }
+.command-line { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 7px 8px 7px 12px; border-bottom: 1px solid rgba(172, 205, 208, .1); }
+.command-line code { min-width: 0; overflow-x: auto; color: #d9e8e4; font: 11px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: nowrap; }
+.prompt { color: var(--teal); }
+.copy-command { flex: 0 0 auto; padding: 6px 8px; color: #9ecbc7; border: 1px solid rgba(123, 206, 205, .28); border-radius: 2px; background: transparent; font-size: 9px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.copy-command:hover, .copy-command.is-copied { color: #071011; border-color: var(--teal); background: var(--teal); }
+.command-link { display: inline-flex; gap: 8px; margin: 16px 8px 5px; color: var(--teal); font-size: 11px; font-weight: 740; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.command-link:hover { color: #b2eee6; }
+.command-link span { font-size: 14px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
 .section-heading h2 { margin: 12px 0 0; max-width: 630px; font-size: clamp(29px, 4.4vw, 50px); line-height: 1.02; letter-spacing: -.055em; font-weight: 520; }
 .section-heading p { max-width: 395px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
@@ -297,6 +312,9 @@ h1, h2, h3 { text-wrap: balance; }
   .feature-strip { grid-template-columns: 1fr; }
   .feature, .feature + .feature { padding: 16px 0; border-left: 0; }
   .feature + .feature { border-top: 1px solid var(--line); }
+  .quickstart-section { padding: 0 0 47px; }
+  .quickstart { grid-template-columns: 1fr; padding: 27px 21px; }
+  .command-panel { width: 100%; }
   .section-heading, .band-inner { align-items: flex-start; flex-direction: column; }
   .card-grid, .payment-grid { grid-template-columns: 1fr; }
   .comic-card { min-height: unset; }
