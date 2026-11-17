@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b10">
+  <meta name="description" content="Private communities access information for FED-OS and Unlocked Browser.">
+  <title>Private communities — Unlocked Browser</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css">
+  <script src="assets/flow-background.js" defer></script><script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="flow-background" data-flow-background aria-hidden="true"></div><div class="flow-content">
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="community-invite.html">Community</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a><a href="login.html">Login</a><a class="invite-nav" href="fedpromptly-invite.html">FedPromptly <span aria-hidden="true">↗</span></a></nav></div></header>
+    <div class="ticker" aria-label="Private communities information"><div class="ticker-track"><div class="ticker-run"><span>Private route</span><b>✳</b><span>18+ confirmation</span><b>✳</b><span>Country eligibility</span><b>✳</b><span>Respect the room</span><b>✳</b></div><div class="ticker-run" data-ticker-copy><span>Private route</span><b>✳</b><span>18+ confirmation</span><b>✳</b><span>Country eligibility</span><b>✳</b><span>Respect the room</span><b>✳</b></div></div></div>
+    <main>
+      <section class="page-intro container single-card"><div class="status-chip">Restricted community route</div><h1 class="page-title">Private communities.</h1><p class="lede" style="margin-inline:auto">The private Matrix room is not listed in the public footer. Confirm the requirements below to reveal the provider link.</p><div class="private-gate-card" data-private-gate>
+        <div class="kicker">Before the link appears</div>
+        <h2>Confirm access requirements</h2>
+        <label class="private-check"><input type="checkbox" data-private-age> I confirm I am 18 or older.</label>
+        <label class="private-field" for="private-country">Country of residence</label>
+        <select id="private-country" data-private-country>
+          <option value="">Select a country</option><option>Canada</option><option>Switzerland</option><option>Russia</option><option>Iran</option><option>Somalia</option><option>Turkmenistan</option><option>Other</option>
+        </select>
+        <p class="small-note">This restricted route is listed as available only to residents of Canada, Switzerland, Russia, Iran, Somalia, and Turkmenistan. Selection is self-attested and not verified.</p>
+        <button class="btn btn-primary" type="button" data-private-reveal disabled>Reveal private community link <span class="arrow">→</span></button>
+        <p class="private-status small-note" data-private-status role="status" aria-live="polite"></p>
+        <div class="private-result" data-private-result hidden><div class="status-chip">Eligibility confirmed</div><p>Use the private Matrix room respectfully and follow its rules.</p><a class="btn btn-quiet" href="https://matrix.to/#/#fed-os:matrix.org" target="_blank" rel="noopener noreferrer">Open private Matrix room <span class="arrow">↗</span></a></div>
+      </div></section>
+    </main>
+    <footer class="site-footer ecosystem-footer">
+  <div class="footer-scanline" aria-hidden="true"></div>
+  <div class="container ecosystem-footer-grid">
+    <section class="footer-identity"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>FED-OS</span></a><p>Open tools, careful testing, and a public trail back to the people building it.</p><a class="footer-portal" href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Explore the ecosystem <span>↗</span></a></section>
+    <section class="footer-group"><h2>FED-OS</h2><div class="footer-links footer-pills"><a href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Ecosystem</a><a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Membership</a><a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a><a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop</a></div></section>
+    <section class="footer-group"><h2>Media</h2><div class="footer-links footer-pills"><a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a><a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a><a href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed</a><a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a></div></section>
+    <section class="footer-group"><h2>Support</h2><div class="footer-links footer-pills"><a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Patreon</a><a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips</a><a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers</a><a href="private-communities.html">Private communities</a></div></section>
+    <section class="footer-group footer-contact"><h2>Contact</h2><div class="footer-links"><a href="mailto:contact@fedpromptly.com">General</a><a href="mailto:support@fedpromptly.com">Support</a><a href="mailto:business@fedpromptly.com">Business</a><a href="mailto:careers@fedpromptly.com">Careers</a></div></section>
+  </div>
+  <div class="container footer-bottom"><span>© FED-OS / Unlocked Browser</span><span>Public links are provider pages · Private routes are gated</span></div>
+</footer>
+  </div>
+  <script>
+    (() => {
+      const age = document.querySelector('[data-private-age]');
+      const country = document.querySelector('[data-private-country]');
+      const reveal = document.querySelector('[data-private-reveal]');
+      const result = document.querySelector('[data-private-result]');
+      const status = document.querySelector('[data-private-status]');
+      const allowed = new Set(['Canada','Switzerland','Russia','Iran','Somalia','Turkmenistan']);
+      const update = () => { reveal.disabled = !(age.checked && allowed.has(country.value)); };
+      age.addEventListener('change', update); country.addEventListener('change', update);
+      reveal.addEventListener('click', () => { result.hidden = false; reveal.hidden = true; status.textContent = 'The private link is now available below.'; });
+    })();
+  </script>
+</body>
+</html>

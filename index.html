@@ -18,7 +18,7 @@
       <div class="header-inner">
         <a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a>
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a><a href="community-invite.html">Community</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a>
+          <a href="index.html">Home</a><a href="community-invite.html">Community</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a><a href="login.html">Login</a><a class="invite-nav" href="fedpromptly-invite.html">FedPromptly <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -56,6 +56,7 @@
       <section class="quickstart-section container" aria-labelledby="quickstart-title">
         <div class="quickstart reveal">
           <div class="quickstart-copy">
+            <img class="signal-badge" src="assets/art/symbol-badge.webp" alt="Abstract teal and violet Unlocked Browser symbol">
             <div class="kicker">Verified path · about 60 seconds</div>
             <h2 id="quickstart-title">Go from clone to first page.</h2>
             <p>Install the small Python toolkit, open a permitted URL, and inspect the result from the command line. No build pipeline, account, or hosted service required.</p>
@@ -74,6 +75,10 @@
         </div>
       </section>
 
+      <section class="section-tight container" aria-label="Launch banner">
+        <figure class="launch-banner reveal"><img src="assets/art/launch-console-banner.webp" alt="Comic illustration of a tester reviewing a harmless browser bug report at a workstation"><figcaption>Open the page. Read the signal. Report the bug.</figcaption></figure>
+      </section>
+
       <section class="section-tight container">
         <div class="section-heading reveal">
           <div><div class="kicker">A little motion, not a galaxy</div><h2>Ink currents in a dark field.</h2></div>
@@ -85,6 +90,18 @@
             <img src="assets/art/signal-loop.gif" alt="Seamlessly animated teal and violet flowing contour ribbons on a near-black background">
           </picture>
         </figure>
+      </section>
+
+      <section class="section container" aria-labelledby="signals-title">
+        <div class="section-heading reveal">
+          <div><div class="kicker">Three signals to look for</div><h2 id="signals-title">Built to feel useful before it feels clever.</h2></div>
+          <p>Every visual has a job: set scope, show the workflow, or make the humans easier to find.</p>
+        </div>
+        <div class="signal-grid">
+          <article class="signal-card reveal reveal-delay-1"><img src="assets/art/safe-scope-card.webp" alt="Comic illustration of a tester drawing a safe boundary around a mock website environment"><div><span class="mini-label">01 · Scope</span><h3>Stay inside the line.</h3><p>Permission and stop conditions are part of the interface, not an afterthought.</p></div></article>
+          <article class="signal-card reveal reveal-delay-2"><img src="assets/art/command-signal-card.webp" alt="Comic illustration of a terminal, browser tab, screenshot, and signal lines"><div><span class="mini-label">02 · Workflow</span><h3>See what ran.</h3><p>Commands, screenshots, text, links, and titles are all visible outputs.</p></div></article>
+          <article class="signal-card reveal reveal-delay-3"><img src="assets/art/community-table-card.webp" alt="Comic illustration of a friendly developer community reviewing a browser report"><div><span class="mini-label">03 · People</span><h3>Keep it human.</h3><p>Trade ideas with other builders without losing the project’s careful tone.</p></div></article>
+        </div>
       </section>
 
       <section class="section container">
@@ -117,14 +134,17 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="container footer-main">
-        <div class="footer-brand"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><p>A small, authorization-first browser testing project. Use only where you have permission.</p></div>
-        <div class="footer-group"><h2>Explore</h2><div class="footer-links"><a href="community-invite.html">Community</a><a href="support.html">Support options</a><a href="responsible-use.html">Responsible use</a></div></div>
-        <div class="footer-group"><h2>Site information</h2><div class="footer-links"><a href="privacy.html">Privacy notes</a><a href="terms.html">Terms and scope</a><a href="leave.html">Leave this page</a></div></div>
-      </div>
-      <div class="container footer-bottom"><span>© Unlocked Browser project</span><span>Designed for GitHub Pages and Cloudflare Pages</span></div>
-    </footer>
+    <footer class="site-footer ecosystem-footer">
+  <div class="footer-scanline" aria-hidden="true"></div>
+  <div class="container ecosystem-footer-grid">
+    <section class="footer-identity"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>FED-OS</span></a><p>Open tools, careful testing, and a public trail back to the people building it.</p><a class="footer-portal" href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Explore the ecosystem <span>↗</span></a></section>
+    <section class="footer-group"><h2>FED-OS</h2><div class="footer-links footer-pills"><a href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Ecosystem</a><a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Membership</a><a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a><a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop</a></div></section>
+    <section class="footer-group"><h2>Media</h2><div class="footer-links footer-pills"><a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a><a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a><a href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed</a><a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a></div></section>
+    <section class="footer-group"><h2>Support</h2><div class="footer-links footer-pills"><a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Patreon</a><a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips</a><a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers</a><a href="private-communities.html">Private communities</a></div></section>
+    <section class="footer-group footer-contact"><h2>Contact</h2><div class="footer-links"><a href="mailto:contact@fedpromptly.com">General</a><a href="mailto:support@fedpromptly.com">Support</a><a href="mailto:business@fedpromptly.com">Business</a><a href="mailto:careers@fedpromptly.com">Careers</a></div></section>
+  </div>
+  <div class="container footer-bottom"><span>© FED-OS / Unlocked Browser</span><span>Public links are provider pages · Private routes are gated</span></div>
+</footer>
   </div>
 </body>
 </html>

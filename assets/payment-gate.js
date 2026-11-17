@@ -58,14 +58,18 @@
   function mountGitHubSponsors() {
     document.querySelectorAll("[data-github-sponsor]").forEach((slot) => {
       if (slot.dataset.mounted) return;
+      const card = document.createElement("div");
+      card.className = "gh-sponsor-card";
       const frame = document.createElement("iframe");
-      frame.src = "https://github.com/sponsors/Git-FED/button";
-      frame.title = "Sponsor Git-FED on GitHub";
-      frame.width = "114";
-      frame.height = "32";
+      frame.src = "https://github.com/sponsors/Git-FED/card";
+      frame.title = "Sponsor Git-FED";
+      frame.width = "600";
+      frame.height = "225";
       frame.loading = "lazy";
-      frame.style.cssText = "display:block;width:114px;height:32px;max-width:100%;border:0;border-radius:6px;background:transparent";
-      slot.replaceChildren(frame);
+      frame.scrolling = "no";
+      frame.referrerPolicy = "no-referrer-when-downgrade";
+      card.appendChild(frame);
+      slot.replaceChildren(card);
       slot.dataset.mounted = "true";
     });
   }
