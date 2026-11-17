@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="72" viewBox="0 0 390 72" role="img" aria-labelledby="title desc">
+  <title id="title">Unlocked Browser</title>
+  <desc id="desc">A fractured teal and violet ribbon mark beside the project name.</desc>
+  <g fill="none" stroke-linecap="square" stroke-linejoin="bevel">
+    <path d="M8 57 27 13l14 31" stroke="#7ce0d6" stroke-width="5"/>
+    <path d="m34 57 16-40 14 19" stroke="#c77ba9" stroke-width="5"/>
+    <path d="m24 34 10 7" stroke="#e9eee9" stroke-width="2" opacity=".82"/>
+  </g>
+  <text x="83" y="43" fill="#edf3f2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="700" letter-spacing="1.2">Unlocked Browser</text>
+  <path d="M84 53H242" stroke="#75d6d0" stroke-width="1" opacity=".6"/>
+</svg>

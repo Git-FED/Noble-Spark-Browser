@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b10">
+  <meta name="description" content="Visit the Unlocked Browser Discord community and newsletter.">
+  <title>Community — Unlocked Browser</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css">
+  <script src="assets/flow-background.js" defer></script><script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="flow-background" data-flow-background aria-hidden="true"></div><div class="flow-content">
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="community-invite.html">Community</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a></nav></div></header>
+    <div class="ticker" aria-label="Community highlights"><div class="ticker-track"><div class="ticker-run"><span>Share a useful tip</span><b>✳</b><span>Ask a careful question</span><b>✳</b><span>Keep the bug reports kind</span><b>✳</b><span>Build together</span><b>✳</b></div><div class="ticker-run" data-ticker-copy><span>Share a useful tip</span><b>✳</b><span>Ask a careful question</span><b>✳</b><span>Keep the bug reports kind</span><b>✳</b><span>Build together</span><b>✳</b></div></div></div>
+    <main>
+      <section class="page-intro container"><div class="kicker">Come say hello</div><h1 class="page-title">The human side of testing.</h1><p class="lede">A place to trade ideas, learn from one another, and remember that software bugs are only embarrassing until somebody writes them down.</p><div class="page-art" style="margin-top:32px"><img src="assets/art/community-comic-card.webp" alt="A friendly group of testers shares a laptop at a community table"></div></section>
+      <section class="section-tight container"><div class="section-heading"><div><div class="kicker">Discord community</div><h2>Centered, contained, and ready to load.</h2></div><p>The live widget is centered below and scales to the available page width on small screens.</p></div>
+        <div class="discord-frame-wrap"><iframe src="https://discord.com/widget?id=1400235929154879490&amp;theme=dark" title="Unlocked Browser Discord server widget" width="350" height="500" allowtransparency="true" frameborder="0" loading="lazy" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+        <p class="small-note" style="text-align:center;margin-top:14px">If the embedded panel is unavailable, open the <a href="https://discord.com/widget?id=1400235929154879490&amp;theme=dark" target="_blank" rel="noopener noreferrer">Discord widget page</a>. Use the server list below for community links; the adults-only server requires a separate email request.</p>
+        <div class="community-server-cta"><p>Looking for a specific Discord community?</p><a class="btn btn-primary" href="discord-servers.html">Browse Discord servers <span class="arrow">→</span></a></div>
+      </section>
+      <section class="section-tight container"><div class="newsletter-card"><div class="kicker">Newsletter</div><h2 style="margin:12px 0 8px;font-size:31px;letter-spacing:-.05em">Notes from GitFed</h2><p class="body-copy" style="font-size:13px">Subscribe through the GitFed Substack publication. On success, this page sends you to a local HTML thank-you page; if the embedded signup endpoint is unavailable, it opens Substack’s own subscribe page.</p><form id="newsletter-form" action="https://gitfed.substack.com/subscribe" method="get"><label class="small-note" for="newsletter-email">Email address</label><input id="newsletter-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><button class="btn btn-primary" type="submit">Continue to newsletter <span class="arrow">→</span></button></form><p id="newsletter-status" class="small-note" role="status" aria-live="polite" style="margin:11px 0 0"></p><p class="small-note" style="margin:14px 0 0">Your email is sent to Substack for subscription processing. See our <a href="privacy.html">privacy notes</a>.</p></div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><p>Community is for learning and sharing, always within permission and site policies.</p></div><div class="footer-group"><h2>Explore</h2><div class="footer-links"><a href="index.html">Home</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a></div></div><div class="footer-group"><h2>Information</h2><div class="footer-links"><a href="privacy.html">Privacy notes</a><a href="terms.html">Terms and scope</a><a href="leave.html">Leave this page</a></div></div></div><div class="container footer-bottom"><span>© Unlocked Browser project</span><span>Discord widget served by Discord</span></div></footer>
+  </div>
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const email = form.elements.email.value.trim();
+      const status = document.getElementById('newsletter-status');
+      const button = form.querySelector('button');
+      if (!email) return;
+      button.disabled = true;
+      status.textContent = 'Opening the secure newsletter sign-up…';
+      const fallback = () => { window.location.href = 'https://gitfed.substack.com/subscribe?email=' + encodeURIComponent(email); };
+      try {
+        const body = new URLSearchParams({ email, source: 'embed' });
+        const response = await fetch('https://gitfed.substack.com/api/v1/free?nojs=true', {
+          method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString()
+        });
+        if (!response.ok) throw new Error('The embedded signup is unavailable.');
+        window.location.href = 'thank-you.html?source=newsletter';
+      } catch (_) {
+        fallback();
+      }
+    });
+  </script>
+</body>
+</html>

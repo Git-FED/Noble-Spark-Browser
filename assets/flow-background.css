@@ -1,0 +1,82 @@
+/* Nocturne Flow — reusable dark background layer */
+:root {
+  color-scheme: dark;
+  --flow-ink: #07090d;
+  --flow-text: #f0f4f5;
+  --flow-muted: #9ba9ad;
+}
+
+html {
+  min-height: 100%;
+  background: var(--flow-ink);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--flow-text);
+  background-color: var(--flow-ink);
+  background-image:
+    linear-gradient(116deg, rgba(8, 15, 20, .88) 0%, transparent 48%, rgba(20, 10, 26, .34) 100%),
+    linear-gradient(180deg, #080b10 0%, #07090d 52%, #09090f 100%);
+  isolation: isolate;
+}
+
+.flow-background {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  background:
+    linear-gradient(127deg, rgba(8, 19, 24, .56) 0%, transparent 38%, rgba(22, 11, 27, .28) 72%, transparent 100%),
+    linear-gradient(180deg, rgba(4, 7, 11, .04), rgba(4, 6, 10, .28));
+  contain: strict;
+}
+
+.flow-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .13;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, .018) 0,
+    rgba(255, 255, 255, .018) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: soft-light;
+}
+
+.flow-background canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .94;
+}
+
+.flow-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.flow-motion-toggle {
+  color: inherit;
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  .flow-background canvas {
+    opacity: .76;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-background canvas {
+    opacity: .64;
+  }
+}

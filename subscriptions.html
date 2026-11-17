@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b10">
+  <meta name="description" content="Age-gated subscription support options for Unlocked Browser.">
+  <title>Subscriptions — Unlocked Browser</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css">
+  <script src="assets/flow-background.js" defer></script><script src="assets/site.js" defer></script><script src="assets/payment-gate.js" defer></script>
+</head>
+<body data-payment-page="subscriptions">
+  <div class="flow-background" data-flow-background aria-hidden="true"></div><div class="flow-content">
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="community-invite.html">Community</a><a href="support.html">Support</a><a href="responsible-use.html">Responsible use</a></nav></div></header>
+    <div class="ticker" aria-label="Subscription information"><div class="ticker-track"><div class="ticker-run"><span>Recurring support</span><b>✳</b><span>Checkout by provider</span><b>✳</b><span>Age-gated page</span><b>✳</b><span>Manage with provider</span><b>✳</b></div><div class="ticker-run" data-ticker-copy><span>Recurring support</span><b>✳</b><span>Checkout by provider</span><b>✳</b><span>Age-gated page</span><b>✳</b><span>Manage with provider</span><b>✳</b></div></div></div>
+    <main>
+      <section class="page-intro container"><div class="kicker">Recurring support</div><h1 class="page-title">Support that keeps showing up.</h1><p class="lede">Choose a subscription provider. Checkout, billing schedules, cancellations, and account details remain with the provider.</p><div class="page-art" style="margin-top:32px"><img src="assets/art/thankyou-comic-banner.webp" alt="Two testers celebrate a successful review beside their laptop"></div></section>
+      <section class="section-tight container" data-payment-options hidden><div class="section-heading"><div><div class="kicker">Choose a provider</div><h2>Subscription options</h2></div><p>Subscriptions use provider-hosted checkout elements. Review renewal, cancellation, and price details with the provider before confirming.</p></div>
+        <div class="payment-grid">
+          <article class="payment-card"><div class="mini-label">Recurring · PayPal</div><h2>PayPal subscription</h2><p>Use the supplied subscription plan. PayPal loads only after you confirm the age gate.</p><div class="paypal-slot" id="paypal-button-container-P-4FD24238VX4902214NK2XP2Y"></div><p id="paypal-status" class="fine-print" role="status" aria-live="polite"></p><p class="fine-print"><a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">Open PayPal’s HTML service page</a> · <a href="support.html">Return to support options</a>.</p></article>
+          <article class="payment-card"><div class="mini-label">Recurring · Stripe</div><h2>Stripe subscription</h2><p>Stripe’s provided buy button loads after the age confirmation. Its checkout configuration is managed in Stripe.</p><div class="stripe-slot" id="stripe-buy-button-slot"></div><p id="stripe-status" class="fine-print" role="status" aria-live="polite"></p><p class="fine-print"><a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Open Stripe’s HTML service page</a> · <a href="support.html">Return to support options</a>.</p></article>
+          <article class="payment-card"><div class="mini-label">Recurring or flexible · GitHub</div><h2>GitHub Sponsors</h2><p>Support Git-FED through GitHub Sponsors; available sponsorship choices appear in the provider UI.</p><div class="github-slot" data-github-sponsor><a class="btn btn-quiet" href="https://github.com/sponsors/Git-FED" target="_blank" rel="noopener noreferrer">Sponsor on GitHub <span class="arrow">↗</span></a></div><p class="fine-print">Provider button loads after age confirmation. <a href="https://github.com/sponsors/Git-FED" target="_blank" rel="noopener noreferrer">Open the HTML sponsor page</a>.</p></article>
+        </div>
+        <p class="small-note" style="margin-top:22px">After a successful provider checkout, the configured provider settings determine its return page. This project also includes a local <a href="thank-you.html">thank-you HTML page</a>.</p>
+      </section>
+      <section class="section-tight container"><p class="small-note">Prefer one-time support? <a href="donations.html">Open the donations page</a>. <a href="support.html">Return to support options</a>.</p></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt=""><span>Unlocked Browser</span></a><p>Recurring billing is managed by the provider you choose.</p></div><div class="footer-group"><h2>Support</h2><div class="footer-links"><a href="subscriptions.html">Subscriptions</a><a href="donations.html">One-time donations</a><a href="thank-you.html">Thank-you page</a></div></div><div class="footer-group"><h2>Information</h2><div class="footer-links"><a href="privacy.html">Privacy notes</a><a href="terms.html">Terms and scope</a><a href="leave.html">Leave this page</a></div></div></div><div class="container footer-bottom"><span>© Unlocked Browser project</span><span>Advisory age gate before payment options</span></div></footer>
+  </div>
+  <section class="payment-gate" data-age-gate aria-labelledby="age-title">
+    <div class="gate-card"><div class="gate-symbol"><img src="assets/brand-mark.svg" alt=""></div><div class="kicker">Before payment methods</div><h2 id="age-title">Are you 18 or older?</h2><p>Please confirm that you are at least 18 and legally able to make a payment where you live before viewing these subscription options. This is an advisory, self-attested front-end gate—not identity or legal-age verification.</p><div class="gate-actions"><a class="btn btn-primary" href="age-confirmed.html?next=subscriptions.html">I am 18+ — continue <span class="arrow">→</span></a><a class="btn btn-quiet" href="leave.html">No — leave this page</a></div><p class="small-note">Payment processing is handled by the named providers. <a href="privacy.html">Read privacy notes</a>.</p></div>
+  </section>
+</body>
+</html>
