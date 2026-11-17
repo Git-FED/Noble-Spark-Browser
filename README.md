@@ -2,7 +2,7 @@
 
 A local-first static project site for an authorization-first browser-testing toolkit.
 
-![Unlocked Browser homepage](assets/readme/homepage.jpg)
+<img width="1283" height="696" alt="Screenshot 2026-11-17 113123" src="https://github.com/user-attachments/assets/bd3c3b9c-e7f8-4a4c-87a5-12cb79177169" />
 
 > Curious by nature. Careful by design.
 
@@ -29,8 +29,7 @@ pip install -r requirements.txt
 python -m playwright install chromium
 python cli.py open https://example.com --text
 ```
-
-[Open the Noble Spark Browser Python repository →](https://github.com/Git-FED/Noble-Spark-Browser-Python)
+<img width="1280" height="695" alt="Screenshot 2026-11-17 172728" src="https://github.com/user-attachments/assets/cd0d669b-7b80-4f98-b2db-e34559590af0" />
 
 For a focused animation test, open [`demo/index.html`](demo/index.html). It is the real Nocturne Flow preview page, not a mockup.
 
@@ -53,7 +52,7 @@ The project is intentionally different in a few ways:
 
 The homepage connects the project message to the verified repository commands, real destinations, animated signal art, and responsible-use guidance.
 
-![Homepage showing the launch console, command panel, and dark visual system](assets/readme/homepage.jpg)
+<img width="1284" height="691" alt="Screenshot 2026-11-17 113110" src="https://github.com/user-attachments/assets/419b1419-e923-4a47-a911-a3afc495ba3b" />
 
 ### Nocturne Flow demo
 
